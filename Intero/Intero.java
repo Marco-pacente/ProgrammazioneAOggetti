@@ -15,7 +15,7 @@ public class Intero {
     public boolean isEven(){
         return((this.numero%2)==0);
     }
-    
+
     public int isSquare(){
         for(int i = 0; i <= this.numero/2; i++){
             if (i*i == this.numero) {
@@ -24,8 +24,4 @@ public class Intero {
         }
         return 0;
     }
-
-
-    
-
 }
