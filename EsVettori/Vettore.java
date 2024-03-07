@@ -72,4 +72,41 @@ public class Vettore {
         }
         return max;
     }
+
+    public int maxMin(int n){
+        int max = Integer.MIN_VALUE;
+        for(int e: v){
+            if(e<n && e>max){
+                max = e;
+            }
+        }
+
+        return max == Integer.MIN_VALUE ? 0 : max;
+    }
+
+    public double potenza(double base, long esponente){
+        double p = 1;
+
+        for (int i = 0; i <= esponente; i++) {
+            p *= base;
+        }
+        return p;
+    }
+
+    public double potenzaCr(double base, long esponente){
+        double p = 1;
+
+        while (esponente > 0) {
+            if (esponente %2 != 0) {
+                p = p * base;
+                esponente--;
+            }
+            base = base*base;
+            esponente /= 2;
+        }
+        return p;
+
+    }
+
+
 }
