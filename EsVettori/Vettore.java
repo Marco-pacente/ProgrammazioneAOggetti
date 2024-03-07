@@ -107,6 +107,4 @@ public class Vettore {
         return p;
 
     }
-
-
 }
