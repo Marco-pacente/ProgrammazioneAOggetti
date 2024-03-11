@@ -1,0 +1,13 @@
+Complessità 
+
+
+Complessità lineare (Somma elementi di un vettore):
+    dimensione n: T[n] = n
+    
+
+Complessità esponenziale: (Torri di Hanoi)
+
+    problema dimensione n -> T[n] = 2^n
+
+    dimensione c * N -> tempo T[c*N] = 2^(C*N) = 2^(N+(c-1)*N) = 2^((2^c-1)*N) * T[N]
+
