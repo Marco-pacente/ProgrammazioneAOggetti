@@ -3,12 +3,19 @@ public class Ricorsione {
         if (n == 0 || n == -1) {
             return 1;
         } else {
-            double f = fattoriale(n-1);
-            //System.out.println(f);
-            return n * f;
+            return n * fattoriale(n-1);
         }
     }
+
+    public static long fibonacci(int n){
+        if(n<=2){
+            return 1;
+        }else{
+            return fibonacci(n-1) + fibonacci(n-2);
+        }
+    }
+
     public static void main(String[] args) {
-        System.out.println("Fattoriale 500: " + fattoriale(500));
+        System.out.println("Fibonacci dei primi 50 numeri: " + fibonacci(50));
     }
 }
