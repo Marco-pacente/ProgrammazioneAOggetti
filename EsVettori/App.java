@@ -8,5 +8,6 @@ public class App {
         System.out.println("Max: " + v.max());
         System.out.println("1.0001 alla 1.000.000.000.000: " + v.potenzaCr(1.0001, 30000));
         System.out.println("Posizione di 7 nell'array: " + v.ricercaBR(7));
+        System.out.println("Posizione di 7 nel'array (con ricerca binaria iterativa): " + v.RicercaB(7));;
     }
 }

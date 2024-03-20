@@ -110,6 +110,10 @@ public class Vettore {
 
     public int ricercaBR(int x){
         Arrays.sort(v);
+        System.out.println("Array ordinato:");
+        for (int i : v) {
+            System.out.println(i);
+        }
         return ricercaBR(v, x, 0, v.length-1);
     }
 
@@ -128,11 +132,25 @@ public class Vettore {
                 return ricercaBR(dati, x, centro+1, fine);
             }
         }
-
-        
-
-
-
     }
 
+    public int RicercaB(int x){
+        Arrays.sort(v);
+        int inizio = 0;
+        int fine = v.length;
+        while (inizio <= fine) {
+            int centro = (inizio+fine)/2;
+            int c = v[centro];
+            if (c==x) {
+                return centro;
+            }else{
+                if (x>c) {
+                    inizio = centro+1;
+                }else{
+                    fine = centro-1;
+                }
+            }
+        }
+        return -1;
+    }
 }
