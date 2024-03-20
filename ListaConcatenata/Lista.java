@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class Lista {
-    Elemento testa = null;
+    ElementoR testa = null;
     public Lista(int n){
         Random r = new Random();
         testa = null;
@@ -11,12 +11,12 @@ public class Lista {
             for (int j = 0; j < ripetizioni; j++) {
                 a += "ciao";
             }
-            testa = new Elemento(a, testa);
+            testa = new ElementoR(a, testa);
         }
     }
 
     public void stampa(){
-        Elemento scan = testa;
+        ElementoR scan = testa;
         while (scan != null) {
             scan.stampa();
             scan = scan.eNext;
@@ -26,7 +26,7 @@ public class Lista {
     public int sommaLunghezze(int n){
         int somma = 0;
         int lunghezza;
-        for (Elemento scan = testa; scan != null; scan = scan.eNext) {
+        for (ElementoR scan = testa; scan != null; scan = scan.eNext) {
             lunghezza = scan.stringa.length();
             if(lunghezza>n){
                 somma += lunghezza;
@@ -39,7 +39,7 @@ public class Lista {
         double somma = 0;
         int cont = 0;
         int lunghezza;
-        for (Elemento scan = testa; scan != null; scan = scan.eNext) {
+        for (ElementoR scan = testa; scan != null; scan = scan.eNext) {
             lunghezza = scan.stringa.length(); 
             if (lunghezza%2 == 0) {
                 somma += lunghezza;
@@ -54,7 +54,7 @@ public class Lista {
     }
 
     public boolean verifica(String s){
-        for(Elemento scan = testa; scan!=null; scan = scan.eNext){
+        for(ElementoR scan = testa; scan!=null; scan = scan.eNext){
             if (scan.stringa.equals(s)) {
                 return true;
             }
@@ -65,7 +65,7 @@ public class Lista {
     public int contaLunghezzeUguali(String s){
         int cont = 0;
         int lunghezza = s.length();
-        for(Elemento scan = testa; scan != null; scan = scan.eNext){
+        for(ElementoR scan = testa; scan != null; scan = scan.eNext){
             if (scan.stringa.length()==lunghezza) {
                 cont++;
             }
@@ -76,7 +76,7 @@ public class Lista {
     public int maxLunghezze(){
         int max = 0;
         int lunghezza;
-        for(Elemento scan = testa; scan != null; scan = scan.eNext){
+        for(ElementoR scan = testa; scan != null; scan = scan.eNext){
             lunghezza = scan.stringa.length();
             if (lunghezza > max) {
                 max = lunghezza;
@@ -89,7 +89,7 @@ public class Lista {
     public int maxLunghezzeN(int n){
         int max = 0;
         int lunghezza;
-        for(Elemento scan = testa; scan != null; scan = scan.eNext){
+        for(ElementoR scan = testa; scan != null; scan = scan.eNext){
             lunghezza = scan.stringa.length();
             if (lunghezza > max && lunghezza < n) {
                 max = lunghezza;

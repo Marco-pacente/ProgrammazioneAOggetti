@@ -1,7 +1,7 @@
-public class Elemento{
+public class ElementoR{
     String stringa;
     Elemento eNext;
-    public Elemento(String s, Elemento next){
+    public ElementoR(String s, Elemento next){
         this.stringa = s;
         this.eNext = next;
     }

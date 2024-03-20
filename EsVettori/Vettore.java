@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Arrays;
 
 public class Vettore {
     int[] v;
@@ -105,6 +106,33 @@ public class Vettore {
             esponente /= 2;
         }
         return p;
+    }
+
+    public int ricercaBR(int x){
+        Arrays.sort(v);
+        return ricercaBR(v, x, 0, v.length-1);
+    }
+
+    private static int ricercaBR(int dati[], int x, int inizio, int fine){
+        if (inizio > fine) {
+            return -1;
+        }
+        int centro = (inizio + fine)/2;
+        int c = dati[centro];
+        if (c == x) {
+            return centro;
+        }else{
+            if (x < c) {
+                return ricercaBR(dati, x, inizio, centro-1);
+            }else{
+                return ricercaBR(dati, x, centro+1, fine);
+            }
+        }
+
+        
+
+
 
     }
+
 }
