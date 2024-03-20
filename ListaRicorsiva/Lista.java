@@ -15,6 +15,10 @@ public class Lista {
         }
     }
 
+    public int lunghezza(){
+        return lunghezza(testa);
+    }
+
     public int lunghezza(Elemento scan){
         if (scan == null) {
             return 0;
@@ -51,4 +55,85 @@ public class Lista {
             return ricerca(t.eNext, cerca);
         }
     }
+
+    public int sommaLunghezze(int n){
+        return sommaLunghezze(testa, n);
+    }
+
+    private static int sommaLunghezze(Elemento scan, int n){
+        if(scan == null){
+            return 0;
+        }else{
+            int l = scan.s.length();
+            if (l>n) {
+                return l + sommaLunghezze(scan.eNext, n);
+            }else{
+                return sommaLunghezze(scan.eNext, n);
+            }
+        }
+    }
+
+    public boolean contiene(String x){
+        return contiene(testa, x);
+    }
+
+    private static boolean contiene(Elemento scan, String s){
+        if (scan == null) {
+            return false;
+        }else{
+            return (scan.s.equals(s) || contiene(scan.eNext, s));
+        }
+    }
+
+    public int numeroStringheUguali(String x){
+        return numeroStringheUguali(testa, x.length());
+    }
+
+    private static int numeroStringheUguali(Elemento scan, int l){
+        if (scan == null) {
+            return 0;
+        }else{
+            int r1 = numeroStringheUguali(scan.eNext, l);
+            if (scan.s.length() == l) {
+                return 1 + r1;                
+            }else{
+                return r1;
+            }
+        }
+    }
+
+    public int maxLunghezze(){
+        return maxLunghezze(testa);
+    }
+
+    private static int maxLunghezze(Elemento scan){
+        if (scan == null) {
+            return 0;
+        }
+        int max = maxLunghezze(scan.eNext); 
+        int e = scan.s.length();
+        if (e>max) {
+            return e;
+        }else{
+            return max;
+        }
+    }
+
+    public int maxLunghezzeMinN(int n){
+        return maxLunghezzeMinN(testa, n);
+    }
+
+    private static int maxLunghezzeMinN(Elemento scan, int n){
+        if (scan == null) {
+            return 0;
+        }
+        int max = maxLunghezzeMinN(scan.eNext, n); 
+        int e = scan.s.length();
+        if (e>max && e<n) {
+            return e;
+        }
+        return max;
+    }
+
+
 }
