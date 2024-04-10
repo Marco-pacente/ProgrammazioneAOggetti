@@ -1,12 +1,13 @@
 public class Mucca extends AnimaleDaCortile {
-    public Mucca(int peso, int eta){
+    public Mucca(int peso, int eta) {
         super(peso, eta);
     }
-    void verso(){
+
+    void verso() {
         System.out.println("*verso mucca*");
     }
 
-    void mostra(){
+    void mostra() {
         System.out.println("Mucca:");
         super.mostra();
     }

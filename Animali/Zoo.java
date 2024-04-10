@@ -2,10 +2,11 @@ import java.util.Random;
 
 public class Zoo {
     Animale V[];
-    public Zoo(int n){
+
+    public Zoo(int n) {
         V = new Animale[n];
         Random rand = new Random();
-        
+
         for (int i = 0; i < n; i++) {
             int r = rand.nextInt(4);
             switch (r) {
@@ -27,12 +28,12 @@ public class Zoo {
         }
     }
 
-
-    void mostra(){
-        for(int i = 0; i < V.length; i++){
+    void mostra() {
+        for (int i = 0; i < V.length; i++) {
             V[i].mostra();
             if (V[i] instanceof Cane) {
-                ((Cane)V[i]).verso();//metodo alternativo fantastico metti che decidi che definisci tutto come Object
+                ((Cane) V[i]).verso();// metodo alternativo fantastico metti che decidi che definisci tutto come
+                                      // Object
             }
         }
     }

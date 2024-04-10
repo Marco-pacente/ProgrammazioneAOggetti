@@ -1,13 +1,13 @@
-public abstract class Animale{
-   int eta;
+public abstract class Animale {
+     int eta;
 
-   public Animale(int e){
+     public Animale(int e) {
           eta = e;
-   }
-   
-   void mostra(){
-        System.out.println("Eta': " + eta);
-   }
+     }
 
-   abstract void verso();
+     void mostra() {
+          System.out.println("Eta': " + eta);
+     }
+
+     abstract void verso();
 }

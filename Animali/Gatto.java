@@ -1,12 +1,13 @@
-public class Gatto extends AnimaleDomestico{
-    public Gatto(String nome, int eta){
+public class Gatto extends AnimaleDomestico {
+    public Gatto(String nome, int eta) {
         super(nome, eta);
     }
-    
-    void verso(){
+
+    void verso() {
         System.out.println("*verso gatto*");
     }
-    void mostra(){
+
+    void mostra() {
         System.out.println("Gatto: ");
         super.mostra();
     }

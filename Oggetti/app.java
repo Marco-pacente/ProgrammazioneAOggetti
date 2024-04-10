@@ -1,4 +1,4 @@
-public class app {
+public class App {
     public static void main(String[] args) {
         Motocicletta m1; //m1 è solo un puntatore
         m1 = new Motocicletta("Breda", "rossa", false); //qui viene effettivamente creata

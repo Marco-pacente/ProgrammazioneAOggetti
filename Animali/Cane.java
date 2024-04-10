@@ -1,13 +1,13 @@
 public class Cane extends AnimaleDomestico {
-    public Cane(String nome, int eta){
+    public Cane(String nome, int eta) {
         super(nome, eta);
     }
 
-    void verso(){
+    void verso() {
         System.out.println("*verso cane");
     }
 
-    void mostra(){
+    void mostra() {
         System.out.println("Cane:");
         super.mostra();
     }

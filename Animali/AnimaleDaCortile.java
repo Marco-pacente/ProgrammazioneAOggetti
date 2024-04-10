@@ -1,12 +1,12 @@
-public abstract class AnimaleDaCortile extends Animale{
+public abstract class AnimaleDaCortile extends Animale {
     int peso;
 
-    public AnimaleDaCortile(int peso, int eta){
+    public AnimaleDaCortile(int peso, int eta) {
         super(eta);
         this.peso = peso;
     }
 
-    void mostra(){
+    void mostra() {
         System.out.println("Peso: " + peso);
         super.mostra();
     }
