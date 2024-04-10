@@ -1,4 +1,4 @@
-public class AnimaleDaCortile extends Animale{
+public abstract class AnimaleDaCortile extends Animale{
     int peso;
 
     public AnimaleDaCortile(int peso, int eta){
@@ -10,4 +10,6 @@ public class AnimaleDaCortile extends Animale{
         System.out.println("Peso: " + peso);
         super.mostra();
     }
+
+    abstract void verso();
 }

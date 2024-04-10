@@ -1,4 +1,4 @@
-public class AnimaleDomestico extends Animale {
+public abstract class AnimaleDomestico extends Animale {
     String nome;
     
     public AnimaleDomestico(String nome, int eta){
@@ -10,6 +10,8 @@ public class AnimaleDomestico extends Animale {
         System.out.println("Nome: " + nome);
         super.mostra();
     }
+
+    abstract void verso();
 
 
 }

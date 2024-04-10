@@ -1,4 +1,4 @@
-public class Animale{
+public abstract class Animale{
    int eta;
 
    public Animale(int e){
@@ -9,7 +9,5 @@ public class Animale{
         System.out.println("Eta': " + eta);
    }
 
-   void verso(){
-        System.out.println("*verso*");
-   }
+   abstract void verso();
 }
