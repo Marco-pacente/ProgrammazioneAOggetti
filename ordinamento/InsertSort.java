@@ -1,5 +1,5 @@
 public class InsertSort{
-    static void insertSort(int[] v){
+    static void sort(int[] v){
         int minInd;
         for(int i = 0; i < v.length; i++){
             minInd = i;

@@ -1,5 +1,5 @@
 public class QuickSort {
-    public static int partition(int v[], int inizio, int fine){
+    static int partition(int v[], int inizio, int fine){
         int pivot = v[inizio];
         do{
             while (inizio < fine && v[fine] >= pivot) {
@@ -18,6 +18,17 @@ public class QuickSort {
             }
         }while(inizio < fine);
         v[inizio] = pivot;
-        return inizio;  
+        return inizio;
+    }
+    private static void quickSort(int[] v, int inizio, int fine){
+        if (inizio < fine) {
+            int mid = partition(v, inizio, fine);
+            quickSort(v, inizio, mid-1);
+            quickSort(v, mid+1, fine);            
+        }
+    }
+
+    public static void sort(int[] v){
+        quickSort(v, 0, v.length-1);
     }
 }
