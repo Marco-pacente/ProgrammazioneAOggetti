@@ -13,6 +13,8 @@ class Pila{
         testa = new Elemento(n);
         numeroElementi++;
     }
+
+    
     public Elemento estrai(){
         if (testa == null) {
             return null;
@@ -23,6 +25,7 @@ class Pila{
             return e;
         }
     }
+
     public int getNumeroElementi(){
         return numeroElementi;
     }
