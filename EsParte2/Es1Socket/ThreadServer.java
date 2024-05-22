@@ -12,8 +12,9 @@ public class ThreadServer extends Thread{
         int maxLungLoc = 0;
         String mess = null;
         try{
-            BufferedReader br = new BufferedReader(new InputStreamReader(soc.getInputStream()));
-            while ((mess = br.readLine())!=null) {
+            //BufferedReader br = new BufferedReader(new InputStreamReader(soc.getInputStream()));
+            DataInputStream in = new DataInputStream(new BufferedInputStream(soc.getInputStream()));
+            while ((mess = in.readUTF())!=null) {
                 System.out.println("Client: " + mess.trim());
                 if (mess.trim().equals("Bye")) {
                     System.out.println("Connessione terminata");

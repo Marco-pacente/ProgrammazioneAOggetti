@@ -6,19 +6,23 @@ public class Client{
         Random rand = new Random();
         try{
             Socket s = new Socket("localhost", 8100);
-            PrintWriter wr = new PrintWriter(s.getOutputStream());
-            
+            //PrintWriter wr = new PrintWriter(s.getOutputStream());
+            DataOutputStream out = new DataOutputStream(s.getOutputStream());
             String hello = "";
-            for(int j = 0; j < rand.nextInt(20); j++){
-                for (int i = 0; i < rand.nextInt(10); i++) {
+            int N = rand.nextInt(20);
+            int M;
+            for(int j = 0; j < N; j++){
+                hello = "";
+                M = rand.nextInt(10);
+                for (int i = 0; i < M; i++) {
                     hello += "ciao";
                 }
                 System.out.println("Inviato: " + hello);
                 System.out.println("Lunghezza: " + hello.length());
-                wr.println(hello);
+                out.writeUTF(hello);
             }
-            wr.println("Bye");
-            wr.flush();
+            out.writeUTF("Bye");
+            out.flush();
             s.close();
         }catch(Exception e){
             System.out.println(e.getMessage());
