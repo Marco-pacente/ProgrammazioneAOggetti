@@ -20,6 +20,7 @@ public class Client{
                 System.out.println("Inviato: " + hello);
                 System.out.println("Lunghezza: " + hello.length());
                 out.writeUTF(hello);
+                out.close();
             }
             out.writeUTF("Bye");
             out.flush();

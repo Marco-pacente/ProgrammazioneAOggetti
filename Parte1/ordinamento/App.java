@@ -7,14 +7,14 @@ public class App {
         for (int i = 0; i < v.length; i++) {
             v[i] = r.nextInt(500000000);
         }
-        /*for (int i : v) {
+        for (int i : v) {
             System.out.println(i);
-        }*/
+        }
         System.out.println("ordinamento");
         QuickSort.sort(v);
         System.out.println("ordinato");
-        /*for (int i : v) {
+        for (int i : v) {
             System.out.println(i);
-        }*/
+        }
     }
 }

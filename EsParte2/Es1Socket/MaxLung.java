@@ -1,8 +1,8 @@
 public class MaxLung {
-    public static int max = 0;
-    public static synchronized void aggiorna(int n){
-        if (n > max) {
-            max = n;
+    public static String SMax = "";
+    public static synchronized void aggiorna(String s){
+        if (s.length() > SMax.length()) {
+            SMax = s;
         }
     }
 }
