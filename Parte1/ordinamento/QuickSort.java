@@ -17,6 +17,10 @@ public class QuickSort {
                 }
             }
         }while(inizio < fine);
+        for (int i : v) {
+            System.out.print(i + "\t");
+        }
+        System.out.print("\n");
         v[inizio] = pivot;
         return inizio;
     }
@@ -24,7 +28,7 @@ public class QuickSort {
         if (inizio < fine) {
             int mid = partition(v, inizio, fine);
             quickSort(v, inizio, mid-1);
-            quickSort(v, mid+1, fine);            
+            quickSort(v, mid+1, fine);
         }
     }
 
